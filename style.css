@@ -1,0 +1,208 @@
+:root {
+  --p-primary: #008069; 
+  --p-secondary: #00a884; 
+  --p-background: #ECE5DD; 
+  --p-surface: #ffffff; 
+  --p-border: #e9edef; 
+  --p-text-primary: #111b21; 
+  --p-text-secondary: #667781; 
+  --p-message-sent: #d9fdd3; 
+  --p-hover: #f5f6f6; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--p-background);
+    min-height: 100vh;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: var(--p-text-primary);
+    font-size: 32px;
+    margin-bottom: 28px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+}
+
+#questionForm {
+    background: var(--p-surface);
+    width: 720px;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--p-border);
+}
+
+label {
+    display: block;
+    margin: 20px 0 12px;
+    color: var(--p-text-secondary);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+select {
+    appearance: none;
+    background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23008069'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") no-repeat right 16px center/14px;
+}
+
+select, input, textarea {
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid var(--p-border);
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: var(--p-surface);
+    color: var(--p-text-primary);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+select:focus, input:focus, textarea:focus {
+    border-color: var(--p-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 128, 105, 0.12);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+#media {
+    padding: 16px;
+    border: 2px dashed var(--p-border);
+    background: var(--p-surface);
+    border-radius: 10px;
+}
+
+#qcmOptions input[type="text"] {
+    background: var(--p-background);
+    border-color: transparent;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--p-primary);
+    width: 18px;
+    height: 18px;
+}
+
+button[type="submit"] {
+    background: var(--p-primary);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 28px;
+    font-weight: 500;
+    margin-top: 24px;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #00795e;
+}
+
+#questionList {
+    background: var(--p-surface);
+    width: 720px;
+    margin-top: 24px;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid var(--p-border);
+}
+
+ul#questions li {
+    background: var(--p-message-sent);
+    padding: 18px 24px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid #d1f7cb;
+}
+
+#directeFields, #qcmFields {
+    margin: 28px -8px;
+    padding: 24px 28px;
+    background: var(--p-background);
+    border-radius: 12px;
+    position: relative;
+}
+
+#directeFields::before, #qcmFields::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 24px;
+    bottom: 24px;
+    width: 4px;
+    background: var(--p-primary);
+    border-radius: 2px;
+}
+
+
+input:hover, textarea:hover, select:hover {
+    background: var(--p-hover);
+}
+
+::-webkit-file-upload-button {
+    background: var(--p-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+#finalizeExamBtn {
+    background: var(--p-primary);
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 28px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 24px 0;
+    width: 720px;
+}
+
+#finalizeExamBtn:hover {
+    background: #006953;
+}
+
+.link-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.link-container input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid var(--p-border);
+    border-radius: 8px;
+    background: var(--p-surface);
+}
+
+.link-container button {
+    background: var(--p-secondary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.link-container button:hover {
+    background: #009672;
+}

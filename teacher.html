@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajout de questions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Ajout de question</h1>
+
+  <form id="questionForm">
+    <label for="type">Type de question :</label>
+    <select id="type" name="type" onchange="toggleFields()">
+      <option value="directe">Question directe</option>
+      <option value="qcm">QCM</option>
+    </select>
+
+    <label for="statement">Énoncé de la question :</label>
+    <textarea id="statement" name="statement" required></textarea>
+
+    <label for="media">Média (image, audio ou vidéo) :</label>
+    <input type="file" id="media" accept="image/*,audio/*,video/*">
+
+    <div id="directeFields">
+      <label for="answer">Réponse attendue :</label>
+      <input type="text" id="answer" name="answer">
+
+      <label for="tolerance">Tolérance (%) :</label>
+      <input type="number" id="tolerance" name="tolerance" min="0" max="100" value="10">
+    </div>
+
+    <div id="qcmFields" style="display:none;">
+      <label>Options :</label>
+      <div id="qcmOptions">
+        <input type="text" name="option[]" placeholder="Option 1">
+        <input type="checkbox" name="correct[]" value="0"> Correcte<br>
+        <input type="text" name="option[]" placeholder="Option 2">
+        <input type="checkbox" name="correct[]" value="1"> Correcte<br>
+      </div>
+      <button type="button" onclick="addQCMOption()">Ajouter une option</button>
+    </div>
+
+    <label for="note">Note pour la question :</label>
+    <input type="number" id="note" name="note" min="0" step="0.5" required>
+
+    <label for="duration">Durée (en secondes) :</label>
+    <input type="number" id="duration" name="duration" min="10" required>
+
+    <button type="submit">Ajouter la question</button>
+  </form>
+
+  <div id="questionList">
+    <h2>Questions ajoutées</h2>
+    <ul id="questions"></ul>
+  </div>
+  <button id="finalizeExamBtn">Finaliser l'examen</button>
+  <div id="examLink"></div>
+  <script src="teacher.js"></script>
+</body>
+</html>
