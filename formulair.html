@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="stylesheet" href="formulaires.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ETUPRO</title>
+</head>
+<body>
+  <div class="container">
+    <form id="signupForm" autocomplete="off">
+      <h1>INSCRIPTION</h1>
+      <input required type="text" name="nom" id="nom-input" placeholder="Nom"><br>
+      <input required type="text" name="prenom" id="Prenom-input" placeholder="Prenom"><br>
+      <input required type="email" name="email" placeholder="Email" id="email-input"><br>
+      <input required type="date" name="date" id="date"><br>
+      <select required name="sexe" id="sexe">
+        <option value="">Sexe</option>
+        <option value="femme">Femme</option>
+        <option value="homme">Homme</option>
+      </select><br>
+      <select required name="profession" id="Profession-input">
+        <option value="">Profession</option>
+        <option value="professeur">Professeur</option>
+        <option value="etudiant">Etudiant</option>
+      </select><br>
+      <select required name="etablissement" id="etablissement">
+        <option value="">Etablissement</option>
+        <optgroup label="universite abdelmalek essaidi">
+          <option value="FS tetouan">FS tetouan</option>
+          <option value="FSJES tetouan">FSJES tetouan</option>
+          <option value="ENSA tetouan">ENSA tetouan</option>
+          <option value="ENA tetouan">ENA tetouan</option>
+          <option value="ENS martil">ENS martil</option>
+          <option value="FSHL martil">FSHL martil</option>
+          <option value="FST tanger">FST tanger</option>
+          <option value="FSJES tanger">FSJES tanger</option>
+          <option value="FMP tanger">FMP tanger</option>
+          <option value="ENCG tanger">ENCG tanger</option>
+        </optgroup>
+        <optgroup label="universite mohamed V">
+          <option value="FS rabat">FS rabat</option>
+          <option value="FSJES rabat">FSJES rabat</option>
+          <option value="ENSAM rabat">ENSAM rabat</option>
+          <option value="FSHL rabat">FSHL rabat</option>
+          <option value="FMP rabat">FMP rabat</option>
+        </optgroup>
+      </select><br>
+      <input required type="text" name="filiere" placeholder="filiere" id="filiere"><br>
+      <input required type="password" name="password" placeholder="saisir le mot de passe" id="password-input"><br>
+      <input required type="password" name="repeat-password" placeholder="confirmer mot de passe" id="repeat-password-input"><br>
+      <button type="submit">Enregistrer</button><br>
+      <label class="mot">vous avez deja un compte ?</label>
+      <a href="connection.html">Connection</a>
+    </form>
+  </div>
+  <script src="signup.js"></script>
+</body>
+</html>
+              
+
+

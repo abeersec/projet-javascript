@@ -1,0 +1,127 @@
+:root {
+  --p-primary: #008069;
+  --p-secondary: #00a884;
+  --p-background: #f0f2f5;
+  --p-surface: #ffffff;
+  --p-border: #e9edef;
+  --p-text-primary: #111b21;
+  --p-text-secondary: #667781;
+}
+
+body {
+    background: url('projet.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+h1{
+    font-size: 36px;
+    text-align: center;
+    color:aliceblue;
+}
+
+
+.container {
+    width: 110%;
+    max-width: 400px;
+    padding: 20px;
+
+}
+
+form {
+      backdrop-filter: blur(20px);
+        background: transparent;
+  border: 2px solid rgb(255, 255, 255, .2);
+  box-shadow: 0 0 10px rgb(0, 0, 0, .2);
+    padding: 2rem;
+    border-radius: 16px;
+}
+
+p {
+    color: var(--p-text-primary);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+input, select, button {
+    width: 90%;
+    padding: 14px 18px;
+    margin-bottom: 1.2rem;
+    border: 1.5px solid var(--p-border);
+    border-radius: 10px;
+    font-size: 15px;
+    background: var(--p-surface);
+    color: var(--p-text-primary);
+    transition: all 0.2s ease;
+}
+
+select {
+    appearance: none;
+    background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23008069'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") no-repeat right 16px center/14px;
+}
+
+input:focus, select:focus {
+    border-color: var(--p-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 128, 105, 0.12);
+}
+
+button[type="submit"] {
+    background: var(--p-primary);
+    color: white;
+    border: none;
+    padding: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #00795e;
+}
+
+::placeholder {
+    color: var(--p-text-secondary);
+    opacity: 0.8;
+}
+
+a {
+    color: var(--p-primary);
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.mot {
+    color: var(--p-text-secondary);
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+
+optgroup {
+    font-weight: 500;
+    color: var(--p-text-primary);
+}
+
+option {
+    padding: 8px;
+    background: var(--p-surface);
+}
+
+
+@media (max-width: 480px) {
+    form {
+        padding: 1.5rem;
+    }
+    
+    p {
+        font-size: 1.5rem;
+    }
+}
