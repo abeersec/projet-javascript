@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr"> 
+<head> 
+<meta charset="UTF-8"> 
+<title>Home page</title>  
+<link rel="stylesheet" href="style4.css"/> 
+</head> 
+<body> 
+    <div class="accueil-body">
+        <h1>Bienvenue sur la plateforme d'examen</h1>
+        <p class="accueil-explication">
+            Veuillez choisir votre espace :
+        </p>
+        <div class="choix-container">
+            <div class="accueil-component materiel-color-blue" onclick="window.location.href='connection.html?role=teacher'">
+                <div class="accueil-component-icon">
+                    <img src="profesor.png.jpg" alt="Professeur">
+                </div>
+                <div class="accueil-component-title">
+                    <a href="#">Espace Professeur</a>
+                </div>
+            </div>
+            <div class="accueil-component materiel-color-black" onclick="window.location.href='connection.html?role=student'">
+                <div class="accueil-component-icon">
+                    <img src="etudiant.png.png" alt="Étudiant">
+                </div>
+                <div class="accueil-component-title">
+                    <a href="#">Espace Étudiant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        $(".accueil-component").click(function () {
+
+            var $url = $(this).data("url");
+
+            window.location.href = $url;
+        })
+
+    </script>
