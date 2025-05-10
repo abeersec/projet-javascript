@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Création d'examen</title>
+    <link rel="stylesheet" href="creation.css">
+</head>
+<body>
+    <div class="container">
+      <form id="examForm" autocomplete="off">
+        <h1>Créer un nouvel examen</h1>
+        <label for="examTitle">Titre de l'examen :</label>
+        <input type="text" id="examTitle" name="examTitle" required>
+
+        <label for="examDescription">Description :</label>
+        <textarea id="examDescription" name="examDescription" rows="4" required></textarea>
+
+        <label for="targetAudience">Public cible :</label>
+        <input type="text" id="targetAudience" name="targetAudience" placeholder="Public cible" required>
+
+        <button type="submit" class="btn"><a href="teacher.html">Créer l'examen</button> 
+      </form>
+    </div>
+    <script src="creation.js"></script>
+</body>
+</html>
